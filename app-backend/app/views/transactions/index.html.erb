@@ -1,0 +1,18 @@
+<!-- Transaction history view -->
+<h2>Transaction history</h2>
+
+<% @transactions.each_with_index do |transaction, index| %>
+  <div data-type="transaction"
+       data-account-id="<%= transaction.account_id %>"
+       data-amount="<%= transaction.amount %>"
+       <% if index == 0 %>data-balance="<%= transaction.current_account_balance %>"<% end %>>
+    <!-- You can add any other transaction details or formatting here -->
+    <p>Transaction Date: <%= transaction.created_at %></p>
+    <p>Transaction Type: <%= transaction.transaction_type %></p>
+    <p>Description: <%= transaction.description %></p>
+    <p>Amount: <%= transaction.amount %></p>
+    <% if index == 0 %>
+      <p>Balance: <%= transaction.current_account_balance %></p>
+    <% end %>
+  </div>
+<% end %>

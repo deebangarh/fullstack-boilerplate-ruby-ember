@@ -1,0 +1,19 @@
+<!-- Submit a new transaction view -->
+<h2>Submit a new transaction</h2>
+<form>
+  <div class="form-group">
+    <label for="InputAccountId">Account ID:</label>
+    <input data-type="account-id" name="transaction[account_id]" type="text" />
+  </div>
+  <div class="form-group">
+    <label for="InputAmount">Amount:</label>
+    <input data-type="amount" name="transaction[amount]" type="number" step="0.01" />
+  </div>
+  <div class="form-group">
+    <label for="TransferToAccount">Transfer To Account:</label>
+    <input data-type="transaction-to-account" name="transaction[transaction_to_account_id]" type="text" />
+  </div>
+  <div class="form-group">
+    <input data-type="transaction-submit" type="submit" value="Submit" />
+  </div>
+</form>

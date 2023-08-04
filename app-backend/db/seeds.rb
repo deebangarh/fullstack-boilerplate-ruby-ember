@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+account1 = Account.new(
+  accountid: 'ABC12345',
+  balance: 100
+)
+account1.save!
+
+account2 = Account.new(
+  accountid: 'ABC45678',
+  balance: 50
+)
+account2.save!
+
+account3 = Account.new(
+  accountid: 'MBN12345',
+  balance: 100
+)
+account3.save!
